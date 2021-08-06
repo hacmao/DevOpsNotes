@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-pod
+  template:
+    metadata:
+      labels:
+        editor: vscode
+        app: nginx-pod
+    spec:
+      containers:
+      - name: name
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "200Mi"
+            cpu: 0.5
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 80
+          - containerPort: 443
+

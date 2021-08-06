@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: fargate
+  region: ap-southeast-1
+
+managedNodeGroups:
+- name: spot
+  instanceTypes: ["t2.micro", "t2.small", "t2.medium"]
+  spot: true
+  desiredCapacity: 2
