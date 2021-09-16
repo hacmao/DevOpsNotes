@@ -35,3 +35,18 @@ Có thể tương tác với zookeeper từ hbase để thực hiện một số
 ```bash
 hbase zkcli rmr /hbase/table/test
 ```
+
+## Cách xóa zombie table
+
++ xóa trong hadoop
+
+```bash
+hadoop fs -rmr /user/hbase/<table>
+```
+
++ xóa trong zookeeper
++ xóa trong S3 (nếu làm với AWS)
++ xóa meta data
++ restart hbase master
+
+
