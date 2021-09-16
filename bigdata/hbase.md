@@ -38,6 +38,7 @@ hbase zkcli rmr /hbase/table/test
 
 ## Cách xóa zombie table
 
++ https://mail-archives.apache.org/mod_mbox/hbase-user/201410.mbox/%3CCADKW6+CgznsBYy5zfWWhoXD7OfzYwW0ASrb5AanWy66nYoVx1A@mail.gmail.com%3E
 + xóa trong hadoop
 
 ```bash
