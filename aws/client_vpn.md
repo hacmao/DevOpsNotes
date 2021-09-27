@@ -1,8 +1,10 @@
 # Create client vpn
 
+[VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html#cvpn-getting-started-certs)  
+
 ## Create ACM certificate
 
-[AWS](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/client-authentication.html#mutual).  
+[ACM](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/client-authentication.html#mutual)  
 Download `easyrsa`.  
 
 ```bash
