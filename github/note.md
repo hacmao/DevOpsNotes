@@ -18,6 +18,13 @@ Host github-superman
    IdentitiesOnly yes
 ```
 
+Connect to remote repo : 
+
+```bash
+ssh -T git@github.com
+ssh -T git@github-superman
+```
+
 ## Github action
 
 ### Event and payloads
