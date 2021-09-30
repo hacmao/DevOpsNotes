@@ -1,5 +1,30 @@
 # Github
 
+## Github multiple key  
+
+Configure ssh config :  
+
+```bash
+# Default github account: oanhnn
+Host github.com
+   HostName github.com
+   IdentityFile ~/.ssh/oanhnn_private_key
+   IdentitiesOnly yes
+   
+# Other github account: superman
+Host github-superman
+   HostName github.com
+   IdentityFile ~/.ssh/superman_private_key
+   IdentitiesOnly yes
+```
+
+Connect to remote repo : 
+
+```bash
+ssh -T git@github.com
+ssh -T git@github-superman
+```
+
 ## Github action
 
 ### Event and payloads
@@ -14,3 +39,4 @@
     echo "${{ toJson(github) }}"
     echo "${{ toJson(github.event) }}"
 ```
+
