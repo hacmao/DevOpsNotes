@@ -1,0 +1,10 @@
+variable "ami_id" {}
+variable "instance_type" {}
+variable "max_size" {}
+variable "desired_size" {}
+variable "min_size" {}
+variable "health_check_type" {}
+variable "max_cpu" {}
+variable "min_cpu" {}
+variable "vpc" {}
+variable "tags" {}
