@@ -50,4 +50,25 @@ hadoop fs -rmr /user/hbase/<table>
 + xóa meta data
 + restart hbase master
 
+## Recovery hbase
+
+- Master Node Not Started
+    
+    [https://stackoverflow.com/questions/17038957/org-apache-hadoop-hbase-pleaseholdexception-master-is-initializing](https://stackoverflow.com/questions/17038957/org-apache-hadoop-hbase-pleaseholdexception-master-is-initializing)
+    
+```bash
+sudo systemctl stop hbase-master.service
+sudo zookeeper-client
+deleteall /hbase/meta-region-server # or try with deleteall /hbase/
+sudo systemctl restart hbase-master.service
+```
+    
+- Or this way:
+    
+  ```bash
+  sudo hbase hbck -j /usr/lib/hbase-operator-tools/hbase-hbck2-1.1.0.jar addFsRegionsMissingInMeta  default:TUNER_TIMELINE_1
+  ```
+    
+
+[https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-s3.html](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-s3.html)
 
